@@ -35,6 +35,21 @@ img {
   padding-inline: 15px;
   width: 100%;
 }
+.padding {
+  padding: 6rem 2rem;
+}
+.hero__grid-item--reverse {
+  flex-direction: row-reverse;
+}
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.subtitle {
+  max-width: 600px;
+  margin: 1rem auto 4rem;
+}
 .buttons {
   display: flex;
   gap: 1.5rem;
@@ -85,6 +100,10 @@ img {
   display: flex;
   align-items: center;
 }
+.navbar.navbar--scroll {
+  background: rgba(38, 36, 49, 0.8);
+  backdrop-filter: blur(10px);
+}
 .navbar__content {
   display: flex;
   justify-content: space-between;
@@ -97,6 +116,10 @@ img {
 }
 .navbar__link {
   color: var(--white-color);
+  font-weight: 600;
+}
+.navbar__link:hover {
+  color: var(--primary-color);
 }
 .navbar__menu.active {
   translate: 0;
@@ -160,6 +183,43 @@ img {
   font-style: italic;
 }
 
+/* Features */
+.features {
+  text-align: center;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero__grid-item {
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+  gap: 1.5rem;
+}
+.hero__grid-column {
+  gap: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero__grid-text {
+  gap: 1.5rem;
+}
+.hero__grid-item-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero__grid-item-desc {
+  text-align: right;
+}
+.hero__grid-item-icon i {
+  color: var(--primary-color);
+}
+
 @media (max-width: 995px) {
   .hero__container {
     flex-direction: column;
@@ -185,6 +245,21 @@ img {
   .testimonial__item:nth-child(3) {
     display: none;
   }
+  .hero__grid {
+    grid-template-columns: repeat(1, auto);
+    gap: 6rem;
+  }
+  .hero__grid-column:nth-child(2) {
+    order: -1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero__grid-item-desc {
+    text-align: center;
+  }
+  .hero__grid-item {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 768px) {
   .burger {
@@ -200,6 +275,7 @@ img {
     left: 0;
     translate: -100%;
     transition: translate 0.3s ease;
+    opacity: 0.95;
   }
   .navbar__list {
     flex-direction: column;
