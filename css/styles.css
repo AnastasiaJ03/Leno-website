@@ -184,7 +184,7 @@ img {
 }
 
 /* Features */
-.features {
+.center {
   text-align: center;
 }
 .hero__grid {
@@ -218,6 +218,33 @@ img {
 }
 .hero__grid-item-icon i {
   color: var(--primary-color);
+}
+
+/* Preview */
+.preview {
+  background: url("../images/video-background.jpg") center center/cover
+    no-repeat;
+}
+.preview__img img {
+  border-radius: 10px;
+}
+.preview__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: none;
+  background: none;
+  color: var(--white-color);
+  background: var(--primary-color);
+  height: 4.375rem;
+  width: 4.375rem;
+  border-radius: 50%;
+  padding-left: 8px;
+}
+
+.preview__img {
+  position: relative;
 }
 
 @media (max-width: 995px) {
